@@ -165,30 +165,35 @@ def write_jams_guitarpro(gpro_path, jams_dir):
 
 
 if __name__ == '__main__':
-    # Construct a path to the base directory
-    gpro_dir = 'path/to/DadaGP'
 
-    # Remove existing JAMS files
-    clean_jams(gpro_dir)
-
-    # Search the specified directory for valid GuitarPro files
-    tracked_files, tracked_dirs = get_valid_files(gpro_dir)
-
-    fw = open('error_files.txt', 'w')
-
-    # Loop through the tracked GuitarPro files
-    for gpro_file, dir in zip(tracked_files, tracked_dirs):
-        print(f'Processing track \'{gpro_file}\'...')
-
-        # Construct a path to GuitarPro file and JAMS output directory
-        gpro_path = os.path.join(dir, gpro_file)
-        jams_dir = os.path.join(dir, gpro_file.replace('.', ' - '))
-
-        # Perform the conversion
-        try:
-            write_jams_guitarpro(gpro_path, jams_dir)
-        except:
-            print(f'error_track: \'{gpro_file}\'...')
-            fw.write(gpro_path + '\n')
-
-    fw.close()
+    gp_file = 'sandpit/test-repeat.gp5'
+    jams_path = 'sandpit/jams'
+    
+    write_jams_guitarpro(gp_file, jams_path)
+#    # Construct a path to the base directory
+#    gpro_dir = '../sandpit/dadagp_1'
+#
+#    # Remove existing JAMS files
+#    clean_jams(gpro_dir)
+#
+#    # Search the specified directory for valid GuitarPro files
+#    tracked_files, tracked_dirs = get_valid_files(gpro_dir)
+#
+#    fw = open('error_files.txt', 'w')
+#
+#    # Loop through the tracked GuitarPro files
+#    for gpro_file, dir in zip(tracked_files, tracked_dirs):
+#        print(f'Processing track \'{gpro_file}\'...')
+#
+#        # Construct a path to GuitarPro file and JAMS output directory
+#        gpro_path = os.path.join(dir, gpro_file)
+#        jams_dir = os.path.join(dir, gpro_file.replace('.', ' - '))
+#
+#        # Perform the conversion
+#        try:
+#            write_jams_guitarpro(gpro_path, jams_dir)
+#        except:
+#            print(f'error_track: \'{gpro_file}\'...')
+#            fw.write(gpro_path + '\n')
+#
+#    fw.close()

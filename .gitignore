@@ -10,3 +10,6 @@ build
 dist
 
 *.DS_Store
+
+*sandpit/gp5/
+*sandpit/dadagp_1/

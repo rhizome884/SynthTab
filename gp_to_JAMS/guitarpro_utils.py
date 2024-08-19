@@ -8,7 +8,7 @@ import jams
 
 
 # Add our custom schema for guitar notes
-jams.schema.add_namespace('note_tab.json')
+jams.schema.add_namespace('gp_to_JAMS/note_tab.json')
 
 
 def ticks_to_seconds(ticks, tempo):
