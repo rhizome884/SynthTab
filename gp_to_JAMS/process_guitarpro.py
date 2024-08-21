@@ -166,8 +166,8 @@ def write_jams_guitarpro(gpro_path, jams_dir):
 
 if __name__ == '__main__':
 
-    gp_file = 'sandpit/test-repeat.gp5'
-    jams_path = 'sandpit/jams'
+    gp_file = 'CarcassiMateo_Andantino.gp5'
+    jams_path = 'jams'
     
     write_jams_guitarpro(gp_file, jams_path)
 #    # Construct a path to the base directory
